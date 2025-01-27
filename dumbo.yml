@@ -1,8 +1,8 @@
 ---
-- name: Dumbo example for log test
+- name: Ping all hosts
   hosts: all
+  gather_facts: no
 
-  - tasks:
-  
-    - name: Induce an exception to see what happens
+  tasks:
+    - name: Ping all hosts to check connectivity
       ansible.builtin.ping:
