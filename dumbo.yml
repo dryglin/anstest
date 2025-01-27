@@ -1,0 +1,10 @@
+- name: Dumbo example for log test
+  hosts: all
+
+  - tasks:
+  
+    - name: Example from an Ansible Playbook
+      win_ping:
+
+    - name: Induce an exception to see what happens
+      win_ping:
