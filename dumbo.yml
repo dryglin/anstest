@@ -1,3 +1,4 @@
+---
 - name: Dumbo example for log test
   hosts: all
 
