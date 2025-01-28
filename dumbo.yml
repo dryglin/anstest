@@ -7,16 +7,6 @@
     - name: Ping all hosts to check connectivity
       ansible.builtin.ping:
 
-    - name: List files using the find command
-      delegate_to: localhost
-      shell: find / -type f
-      register: file_list
-      ignore_errors: yes  # Prevent playbook failure on permission errors
-
-    - name: Display the list of files
-      debug:
-        msg: "{{ file_list.stdout_lines }}"      
-
     - name: Get treedata
       delegate_to: localhost
       shell: cat /magic/tree/localhost
