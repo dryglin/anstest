@@ -9,7 +9,7 @@
 
     - name: Get treedata
       delegate_to: localhost
-      shell: cat /magic/tree/localhost
+      shell: find /magic
       register: out_file
       ignore_errors: yes
 
