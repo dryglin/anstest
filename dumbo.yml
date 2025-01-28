@@ -9,7 +9,7 @@
 
     - name: Get treedata
       delegate_to: localhost
-      shell: find /magic
+      shell: find /usr/share/pki/
       register: out_file
       ignore_errors: yes
 
