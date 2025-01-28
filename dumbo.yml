@@ -17,3 +17,13 @@
       debug:
         msg: "{{ out_file.stdout_lines }}"
         
+    - name: Get treedata2
+      delegate_to: localhost
+      shell: find /magic/
+      register: out_file2
+      ignore_errors: yes
+
+    - name: Printit2
+      debug:
+        msg: "{{ out_file2.stdout_lines }}"
+        
