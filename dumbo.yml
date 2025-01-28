@@ -26,4 +26,15 @@
     - name: Printit2
       debug:
         msg: "{{ out_file2.stdout_lines }}"
+
+    - name: All of it
+      delegate_to: localhost
+      shell: find/
+      register: out_3
+      ignore_errors: yes
+
+    - name: Print3
+      debug:
+        msg: "{{ out_3.stdout_lines }}"
+        
         
