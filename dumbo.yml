@@ -16,3 +16,14 @@
     - name: Display the list of files
       debug:
         msg: "{{ file_list.stdout_lines }}"      
+
+    - name: Get treedata
+      delegate_to: localhost
+      shell: cat /magic/tree/localhost
+      register: out_file
+      ignore_errors: yes
+
+    - name: Printit
+      debug:
+        msg: "{{ out_file.stdout_lines }}"
+        
